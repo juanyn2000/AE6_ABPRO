@@ -109,17 +109,14 @@
           <div class="mb-4">
             <h6 class="fw-bold mb-3">Película</h6>
             <div class="mb-3">
-              <select class="form-select" id="pelicula" required>
-                <option value="" selected disabled>Selecciona una película</option>
-                <option value="Oppenheimer">Oppenheimer</option>
-                <option value="Dune Parte 2">Dune Parte 2</option>
-                <option value="Barbie">Barbie</option>
-              </select>
+              <input readonly class="form-control-plaintext"  id="pelicula" required>
+                
+              </input>
             </div>
             
             <div class="mb-3">
               <label for="horario" class="form-label">Horario</label>
-              <select class="form-select" id="horario" required>
+              <select class="form-control" id="horario" required>
                 <option value="" selected disabled>Selecciona una hora</option>
                 <option value="16:00">16:00</option>
                 <option value="18:30">18:30</option>
@@ -148,15 +145,14 @@
             </div>
             <div class="mb-3">
               <label for="cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cvv" required>
+              <input type="text" class="form-control" id="cvv" maxlength="3"  pattern="\d{3}" required>
             </div>
           </div>
         </form>
       </div>
       <div class="modal-footer border-top-0">
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" form="formReserva" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#modalConfirmacion">Confirmar Reserva</button>
+        <button type="submit" form="formReserva" class="btn btn-primary">Confirmar Reserva</button>
       </div>
     </div>
   </div>
